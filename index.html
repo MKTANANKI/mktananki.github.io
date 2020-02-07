@@ -268,13 +268,13 @@
                         <p class="note">Thanks for showing interest. Please reach out later for communication</p>
                         <p class="print-note">Please scan below QR Code for contact information.</p>
                         <div>
-                            <form>
-                                <input aria-label="Name" type="text" placeholder="Name" />
-                                <input aria-label="Mobile Number" type="text" placeholder="Mobile Number" />
-                                <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" />
-                                <textarea aria-label="Enter your Comments" placeholder="Comments"></textarea>
+                            <form id="contactform" name="contactform">
+                                <input aria-label="Name" type="text" placeholder="Name" name="name" />
+                                <input aria-label="Mobile Number" type="text" placeholder="Mobile Number" name="mobile" />
+                                <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" name="mailId" />
+                                <textarea aria-label="Enter your Comments" placeholder="Comments" name="comments"></textarea>
                                 <div class="btn-ctn">
-                                    <button aria-label="Send request for contact" type="button">Send</button>
+                                    <button aria-label="Send request for contact" type="button" id="sendMessage">Send</button>
                                 </div>
                             </form>
                             <div class="qr">

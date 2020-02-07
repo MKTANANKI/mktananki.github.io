@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body oncontextmenu="return false;">
     <div class="container">
         <header id="header">
             <img src="/logo.png" alt="MK" id="logo" style="position: absolute;z-index: -9;pointer-events: none; left: -999px;">
@@ -29,7 +29,7 @@
                     <span>&nbsp;</span>
                     }</a>
                 <ul id="menu">
-                    <li class="active">
+                    <li>
                         <a title="About Murali" href="javascript:;" data-nav="about"
                             onclick="navigateTo('about')">About</a>
                     </li>
@@ -222,8 +222,6 @@
                     </div>
                 </div>
             </section>
-
-
             <section id="portfolio">
                 <div class="section-container">
                     <div>
@@ -252,20 +250,17 @@
                         
                         <h4>Products</h4>
                             <p>Dynamica e-mailer template creation.(Drag & Drop and picking up options & entering context)</p>
-                            <p>Feedback / Survey template creation.(Drag & Drop / Sorting and picking up options & entering context). Supports Eight different types questions types.</p>
+                            <p>Feedback / Survey template creation.(Drag & Drop / Sorting and picking up options & entering context). Supports Eight different types of question catagories.</p>
                             <p>JSON Builder (with beutify options)</p>
                             <p>Report generator in HTML tables based on input provided.</p>
                         <h4>Static Websites</h4>
                             <p>Developed & hosted more than 100+ static websites</p>
                         <h4>PWA(Progressive Web Application)</h4>
-                            <p>This is my first Progressive Web App, it makes me feel good when I check site audit & w3c standards.</p>
+                            <p>Good understanding of Progressive Web App, and this website is a PWA, which makes me feel good when I do site audit & check for w3c standards.</p>
                         </div>
                     </div>
                 </div>
             </section>
-
-
-
             <section id="contact">
                 <div class="section-container">
                     <div>
@@ -274,12 +269,12 @@
                         <p class="print-note">Please scan below QR Code for contact information.</p>
                         <div>
                             <form>
-                                <input aria-label="Name" type="text" placeholder="Name" disabled="disabled" />
-                                <input aria-label="Mobile Number" type="text" placeholder="Mobile Number" disabled="disabled" />
-                                <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" disabled="disabled" />
-                                <textarea aria-label="Enter your Comments" placeholder="Comments" disabled="disabled"></textarea>
+                                <input aria-label="Name" type="text" placeholder="Name" />
+                                <input aria-label="Mobile Number" type="text" placeholder="Mobile Number" />
+                                <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" />
+                                <textarea aria-label="Enter your Comments" placeholder="Comments"></textarea>
                                 <div class="btn-ctn">
-                                    <button aria-label="Send request for contact" type="button" disabled="disabled">Send</button>
+                                    <button aria-label="Send request for contact" type="button">Send</button>
                                 </div>
                             </form>
                             <div class="qr">

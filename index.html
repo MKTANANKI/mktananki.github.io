@@ -287,7 +287,7 @@
                         <p class="print-note">Please scan below QR Code for contact information.</p>
                         <div>
                             <form id="contactform" name="contactform">
-                                <input aria-label="Name" type="text" placeholder="Name" name="name" />
+                                <input aria-label="Name" type="text" placeholder="Name" name="name" id="name" />
                                 <input aria-label="Mobile Number" type="text" placeholder="Mobile Number"
                                     name="mobile" />
                                 <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" name="mailId" />
@@ -297,6 +297,7 @@
                                     <button aria-label="Send request for contact" type="button"
                                         id="sendMessage">Send</button>
                                 </div>
+                                <div class="success-notify">Hi <span id="nameTxt"></span>, thanks for writing to me.</div>
                             </form>
                             <div class="qr">
                                 <img src="/qr.svg" alt="qr code for contact info - murali.tananki@gmail.com" />
@@ -452,7 +453,9 @@
                 </tbody>
             </table>
         </div>
-        <div class="doc-options"></div>
+        <div class="options">
+            <a href="javascript:;" id="close">Close</a>
+        </div>
     </div>
     <script src="jquery-3.4.1.min.js"></script>
     <script src="main.js"></script>

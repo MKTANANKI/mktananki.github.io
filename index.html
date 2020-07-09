@@ -7,30 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="UI Developer, UX Developer, Murali Krishna Tananki" />
-    <meta name="description" content="Murali Krishna Tananki, UI/UX Developer - Profile" />
+    <meta name="description" content="Murali Krishna Tananki, UI/UX Developer - Profile / CV / Resume" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="manifest" href="/manifest.json">
 
     <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
 </head>
 
-<body oncontextmenu="return false;">
+<body>
     <div class="container">
         <header id="header">
-            <img src="/logo.png" alt="MK" id="logo"
-                style="position: absolute;z-index: -9;pointer-events: none; left: -999px;">
             <nav>
                 <a id="hamburger" title="menu" onclick="toggleMenu(event)">{
                     <span>&nbsp;</span>
                     }</a>
                 <ul id="menu">
-                    <li>
+                    <li class="active">
                         <a title="About Murali" href="javascript:;" data-nav="about"
                             onclick="navigateTo('about')">About</a>
                     </li>
@@ -70,15 +68,12 @@
                         </h3>
                         <p>
                             I'm <span class="dashed-underline" title="Murali Krishna Tananki">Murali Krishna</span>,
-                            UI/UX Developer with decent hands-on experience in developing Web & Mobile Application.
+                            UI/UX Developer with decent hands-on expereince in developing Web & Mobile Application.
                             I'm currently working with one of the reputed <span title="MNC">product based
                                 organizantion</span>.
                         </p>
                         <p>I keep interest in exploring technical stuff related to specific technologies to enhance my
                             skills and believe me I'm a good trainer too.</p>
-                        <div class="cv">
-                            <a href="javascript:;" id="viewCv">View / Download CV</a>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -212,20 +207,22 @@
                                     <span>Issued on May, 2019 - No Expiration</span>
                                 </li>
                                 <li>
-                                    <p>Advanced Google Analytics</p>
-                                    <span>Google [Google Analytics]</span>
-                                    <span>Issued on Feb, 2020 - NA</span>
-                                </li>
-                                <li>
                                     <p>AWS Attd Cert</p>
                                     <span>Amazon</span>
                                     <span>Issued on Jun, 2019 - NA</span>
+                                </li>
+                                <li>
+                                    <p>Web UI Technologies</p>
+                                    <span>RankSheet [HTML,CSS,JS,jQuery, SEO/SEM]</span>
+                                    <span>Issued on Feb, 2016 - NA</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
+
+
             <section id="portfolio">
                 <div class="section-container">
                     <div>
@@ -267,40 +264,38 @@
                             <p>Dynamica e-mailer template creation.(Drag & Drop and picking up options & entering
                                 context)</p>
                             <p>Feedback / Survey template creation.(Drag & Drop / Sorting and picking up options &
-                                entering context). Supports Eight different types of question catagories.</p>
+                                entering context). Supports Eight different types questions types.</p>
                             <p>JSON Builder (with beutify options)</p>
                             <p>Report generator in HTML tables based on input provided.</p>
                             <h4>Static Websites</h4>
                             <p>Developed & hosted more than 100+ static websites</p>
                             <h4>PWA(Progressive Web Application)</h4>
-                            <p>Good understanding of Progressive Web App, and this website is a PWA, which makes me feel
-                                good when I do site audit & check for w3c standards.</p>
+                            <p>This is my first Progressive Web App, it makes me feel good when I check site audit & w3c
+                                standards.</p>
                         </div>
                     </div>
                 </div>
             </section>
+
+
+
             <section id="contact">
                 <div class="section-container">
                     <div>
                         <h3>Contact</h3>
-                        <p class="note">Thanks for showing interest. Please reach out later for communication</p>
-                        <p class="print-note">Please scan below QR Code for contact information.</p>
                         <div>
-                            <form id="contactform" name="contactform">
-                                <input aria-label="Name" type="text" placeholder="Name" name="name" id="name" />
-                                <input aria-label="Mobile Number" type="text" placeholder="Mobile Number"
-                                    name="mobile" />
-                                <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" name="mailId" />
-                                <textarea aria-label="Enter your Comments" placeholder="Comments"
-                                    name="comments"></textarea>
+                            <form>
+                                <input aria-label="Name" type="text" placeholder="Name" />
+                                <input aria-label="Mobile Number" type="text" placeholder="Mobile Number" />
+                                <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" />
+                                <textarea aria-label="Enter your Comments" placeholder="Comments"></textarea>
                                 <div class="btn-ctn">
                                     <button aria-label="Send request for contact" type="button"
-                                        id="sendMessage">Send</button>
+                                        onclick="sendEmail()">Send</button>
                                 </div>
-                                <div class="success-notify">Hi <span id="nameTxt"></span>, thanks for writing to me.</div>
                             </form>
                             <div class="qr">
-                                <img src="/qr.svg" alt="qr code for contact info - murali.tananki@gmail.com" />
+                                <img src="/images/qr.svg" alt="qr code for contact info - murali.tananki@gmail.com" />
                             </div>
                         </div>
                     </div>
@@ -312,198 +307,30 @@
         </footer>
     </div>
 
-    <div id="cvContainer">
-        <div id="cv">
-            <table cellpadding="0" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th class="img-cnt">
-                            <img src="/mk.jpg" alt="MK">
-                        </th>
-                        <th>
-                            <table>
-                                <tr>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/main.js"></script>
 
-                                    <th class="details-cnt">
-                                        <h3>Murali Krishna Tananki</h3>
-                                        <p>UI/UX Developer</p>
-                                        <div class="mobile-view">
-                                            <a href="mailto:murali.tananki@gmail.com"
-                                                title="murali.tananki@gmail.com">E-Mail</a>
-                                            <a href="https://mktananki.github.io/" target="_blank"
-                                                title="https://mktananki.github.io/">Visit Web</a>
-                                            <a href="tel:+919618220930" title="+919618220930">Call</a>
-                                        </div>
-                                    </th>
-                                    <th class="contact-cnt mobile-hide">
-                                        <p>
-                                            <span>
-                                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAADbUlEQVRoge2ZS0hUURjHf6MGUTjGoFSGgVYUCC0DsTDoYdKigmjTpiDcSbuErLBVLdq0kiAoaNEiCGtVBL00hOiBQtCDCCQlKCMzwvIxLe53OMfb3Lnn3Ll3Jml+cJnhnu+c7/+/jzPfOQNlyiwqMkAvMAJMyzEs5zIlU+XIdmAcyAYc40BbqcTZcgT4hSf4AbAD7w5kgJ1yLisxh0sjMT8pvMdGXfWLQEVI3Lx8LzpPCH5ckjoGbMWlHIxkHWLjxEpjVVIDx4DThcv1HC9Kykb+Nf4rI5VAX0DbAMlPtX2ioSCWAf2+hEkZeewb22y7JVoiUQsMyUBfAowkicqncg+JJicagdcywAdgE6Uzsg54J9/fAxtsB9gMfJSOI8Aa38DFwsy3CniGvkMtYZ33AFPS4Q5QHTCwwvUdsa6dcuSrBu7KuSnRGsh3CbwCLAkZOIoR/wvtYgTRdFXOT5oN/lpL3YEflsm2OQiLC6UtnS/IvHqDQH2OtmLhz1cH3GehxtDOo/I5DrQGDJw0Zr6t6OXzKA5GTPe/gS6bzjGj8nWJhqxoqrPRYgZUAufxlqRWtzNm/BPFJfQE5GREcQg9JWeBphjFBtFk5JsSDSaRjAA0A2+kbQLoCBGSBk4AT4GfePtaL4BTwIqQvh2SIys5mx10WgWk0QXkHHCa3Mve3ejKINcxJjF+UjLmnMT1AzURdFoFpIAeYFbibhvJ/G1DwH68lzMD7AIeSdsscBJ9IWpkLHWResi/N1CwEUU7+va/xZseTSFnyL3WqZA286q3yhjqsW23yB+bEYAGvHfAfGwmCKmBBPM9UMdL7CeSWI0AHDP6PMcr/21pxBOv+h916BubkSq83xgVf41oK7ilwGVjHPO3oiCdNkbq0dun08Bxi8RhdKI3vweA1SHxBRtpAz6ha54ttkotaEFP22PoGi8XBRnpRNc8D4GVjkJtqAXuSY4ZoDsgLpKR5cB1OT8PnCOG7Zk8VAEX0DVervfP2ch6vHV7Fm/1eDAmsTbsA75J7mG8TQiFk5G9wFfy1zxJsxF4JRomgQNy3trIWfStvcHCTYhikwZuoquGXhyMqHqom+L9H5KPFN40P4Pl2kgFfMYr8v41zOnfykhDEURFZS0J1Fql4i+dQf8hLgYzC/CvGQZLoiIaLtuvZcpE5Q9mpL9ci12ORwAAAABJRU5ErkJggg=="
-                                                    alt="E-Mail: " />
-                                            </span>
-                                            <span>
-                                                <a href="mailto:murali.tananki@gmail.com"
-                                                    title="murali.tananki@gmail.com">murali.tananki@gmail.com</a>
-                                            </span>
-                                        </p>
-                                        <p>
-                                            <span>
-                                                <img src="data:image/png;base64,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"
-                                                    alt="Website: " />
-                                            </span>
-                                            <span>
-                                                <a href="https://mktananki.github.io/" target="_blank"
-                                                    title="https://mktananki.github.io/">https://mktananki.github.io/</a>
-                                            </span>
-                                        </p>
-                                        <p>
-                                            <span>
-                                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAABYUlEQVRoge2aQW7CMBBFH1UPESRYc5WibrhmAYk7QWHVVoULtAs7wrUaJXbGZkrnSRYywX/mZxwHTOAfsgJOwFeldvQxxTlWNBGaEacVr0VSvIeCiVTlccTYUtWZ5AyyigRkncFfGFXhu6mIGdGGGdGGGdGGGdGGGdGGGdGGGdGGGdGGGdGGxG/2mntdnVhFkNs9EaF0RZ6BV+AALAvHGkzO3u8hGLcvGe9urpEUciqyxFVlDzxViHdbYYl4Y6fWHNgCF9L+wAnbBdgBi5G5DCY+Q3PgPSPxrvbhNbviFTOy9f010CQkEB9vgE2gNVQnm1i4nU5Nz+f6dACm/r1zgs4PUu7Oregk6ksT6w/K0e4jlJlanwk62cTCO9/f+ESGJhAfn3JdOF4SdLKJhRe4JVNq+X0DZrcwAm7dX+NWm1wDZ1wlZpG2fUX506QYOflXqWuir4UxRVlR9wmhYo85qeYbyx0dTObsTYgAAAAASUVORK5CYII="
-                                                    alt="Mobile: " />
-                                            </span>
-                                            <span>
-                                                <a href="tel:+919618220930" title="+919618220930">+91 9618.220.930</a>
-                                            </span>
-                                        </p>
-                                    </th>
-                                </tr>
-                            </table>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="2" class="tbody-cnt">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <h3>Career Objective:</h3>
-                                        <p>Always seek for a challenging position at workplace, where I can learn and
-                                            utilize my skills for mutual growth & success.</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h3>Experience:</h3>
-                                        <ul>
-                                            <li>
-                                                Working as "Consultant(UX Developer)" in ADP Pvt. Ltd., Hyderabad from
-                                                December, 2019 to till date.
-                                                December, 2019 to till date.
-                                            </li>
-                                            <li>
-                                                Worked as "Associate(Sr. Developer)" at Cognizant, Hyderabad from July,
-                                                2016 to December, 2019.
-                                                December, 2019 to till date.
-                                            </li>
-                                            <li>
-                                                Working as "Sr. UI Developer" at Threshold, Hyderabad from September,
-                                                2014 to June, 2016
-                                                December, 2019 to till date.
-                                            </li>
-                                            <li>
-                                                Working as "Web Designer(Developer)" in 55 Web, Hyderabad from February,
-                                                2014 to September, 2014.
-                                            </li>
-                                            <li>
-                                                Working as "Tr./ UI Engineer" in Xerago, Chennai from July, 2013 to
-                                                January, 2014.
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h3>Education:</h3>
-                                        <table id="edu">
-                                            <thead>
-                                                <tr>
-                                                    <th>Qualification</th>
-                                                    <th>Branch / Stream</th>
-                                                    <th>Board / University</th>
-                                                    <th>Duration</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>B.TECH</td>
-                                                    <td>Information Technology</td>
-                                                    <td>JNTU-H</td>
-                                                    <td>2007-11</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Intermediate</td>
-                                                    <td>MPC</td>
-                                                    <td>BIE</td>
-                                                    <td>2005-07</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>X<sup>th</sup></td>
-                                                    <td>KVS-Sylb.</td>
-                                                    <td>CBSE</td>
-                                                    <td>2004-05</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h3>Technical Skills:</h3>
-                                        <ul>
-                                            <li>Hands-on experience with Angular v2+ & AngularJS v1.x</li>
-                                            <li>Good understanding of Object Oriented JavaScript & TypeScript.</li>
-                                            <li>Extensively proficient in HTML5, CSS3, JavaScript & jQuery.</li>
-                                            <li>Proficient in developing RWD(including Retina Display) using media queries & frameworks like Angular Material, Bootstrap(v3&v4) etc.</li>
-                                            <li>Good understanding of Test Driven Development.</li>
-                                            <li>Working knowledge of CSS preprocessors like SCSS/SASS, LESS.</li>
-                                            <li>Capable to work with PWA(Progressive Web Applications).</li>
-                                            <li>Worked on Accessibility as per WCAG standards.</li>
-                                            <li>Can assure pixel perfection with Cross Browser, Device compatability adhering W3C standards.</li>
-                                            <li>Good knowledge on Digital Marketing & working with SEO, Google Analytics, Optimizely etc.</li>
-                                            <li>Worked on EDM / E-Mailer supporting major mailers in the market.</li>
-                                            <li>Good knowledge of CMS tools like Wordpress.</li>
-                                            <li>Capable to provide High Fidility Prototype using Adobe XD and can work with Adobe Photoshop(Basic).</li>
-                                            <li>Have good integration knowledge in .NET, JAVA & PHP.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h3>Other Skill-set:</h3>
-                                        <ul>
-                                            <li>Client Interaction, Requirement gathering & Analysis and Deployments.</li>
-                                            <li>Maintaining & working on documents like RFPs, BRDs, RTMs, FlowCharts etc.</li>
-                                            <li>Working on tools like Assembla, Tulip, Bit Bucket, Zepline, Invision, Jira etc.</li>
-                                            <li>Web Application Deployement & Web Hosting.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h3>Certifications:</h3>
-                                        <ul>
-                                            <li>Adobe XD Essentials for creating wireframes, prototypes, design and development specs certified by Adobe.</li>
-                                            <li>JavaScript Application Programming by Alison.</li>
-                                            <li>Advanced Google Analytics certification for completion by Google Analytics Academy.</li>
-                                            <li>AWS Course completion certification.</li>
-                                            <li>RankSheet Certification for UI Technologies.</li>
-                                            <li>Cognizant Technical internal certifications.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="options">
-            <a href="javascript:;" id="close">Close</a>
-        </div>
-    </div>
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="main.js"></script>
+    <script src="https://unpkg.com/@optimizely/optimizely-sdk@3.5/dist/optimizely.browser.umd.min.js"></script>
+    <script src="https://cdn.optimizely.com/datafiles/FoJWryRReaUayATZzR2z2.json/tag.js"></script>
+
+    <script>
+        var optimizelyClientInstance = window.optimizelySdk.createInstance({
+            datafile: window.optimizelyDatafile,
+        });
+
+        var optimizelyClientInstance = window.optimizelySdk.createInstance({
+            datafile: window.optimizelyDatafile,
+        });
+
+        var enabled = optimizelyClientInstance.isFeatureEnabled('Murali_Tananki', 'user123');
+
+        if (enabled) {
+            console.log('Feature is ON!');
+        } else {
+            console.log('Feature is off.');
+        }
+    </script>
 </body>
 
 </html>

@@ -286,12 +286,14 @@
                         <h3>Contact</h3>
                         <div>
                             <!-- <form method="post" name="contact_form" action="contact.php"> -->
-                            <form name="contact_form" action="mailto:murali.tananki@gmail.com">
+                            <form name="contact_form">
                                 <input aria-label="Name" type="text" placeholder="Name" name="name" />
                                 <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" name="email" />
-                                <textarea aria-label="Enter your Comments" placeholder="Comments" name="message"></textarea>
+                                <textarea aria-label="Enter your Comments" placeholder="Comments" name="message" id="msg"></textarea>
                                 <div class="btn-ctn">
-                                    <button aria-label="Send message" type="submit">Send</button><!--onclick="sendEmail()"-->
+                                    <!--<button aria-label="Send message" type="submit">Send</button>-->
+<!--onclick="sendEmail()"-->
+                                    <a id="send" href="mailto:murali.tananki@gmail.com?subject=MKTANANKI Website Visitor Message&body=">Send</a> 
                                 </div>
                             </form>
                             <div class="qr">
@@ -311,7 +313,16 @@
     <script src="main.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
+$(function(){
+$('#msg').on('keyup', function(){
+var href = $('#send').attr('href'),
+msg = $(this).val(), 
+mailBody = href+msg;
+    $('#send').attr('href', mailBody);
+})
+})
 function sendEmail(){
+
 //Security Token: 0b54fb81-e2ab-478c-a72c-ccd7cc987134
 /*     Email.send({
     SecureToken : "0b54fb81-e2ab-478c-a72c-ccd7cc987134",
@@ -321,7 +332,7 @@ function sendEmail(){
     Body : "And this is the body"
 }).then(
   message => alert('Sent Message');
-);*/
+);
    Email.send({
     Host : "smtp25.elasticemail.com",
     Username : "murali.tananki@gmail.com",
@@ -332,7 +343,7 @@ function sendEmail(){
     Body : "And this is the body"
 }).then(
   message => alert(message)
-);
+);*/
 }
 </script>
 </body>

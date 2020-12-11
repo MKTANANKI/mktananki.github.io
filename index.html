@@ -310,6 +310,22 @@
 
     <script src="jquery-3.4.1.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+function sendEmail(){
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "murali.tananki@gmail.com",
+    Password : "1720C39E72B2FE410091D265EFBD0E4555CF",
+    To : 'murali.tananki@gmail.com',
+    From : "muralikrishnatananki@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert('Mail sent')
+);
+}
+</script>
 </body>
 
 </html>

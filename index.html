@@ -314,7 +314,7 @@
     <script>
 function sendEmail(){
 //Security Token: 0b54fb81-e2ab-478c-a72c-ccd7cc987134
-    Email.send({
+/*     Email.send({
     SecureToken : "0b54fb81-e2ab-478c-a72c-ccd7cc987134",
     To : 'murali.tananki@gmail.com',
     From : "murali.tananki@gmail.com",
@@ -322,9 +322,9 @@ function sendEmail(){
     Body : "And this is the body"
 }).then(
   message => alert('Sent Message');
-);
-/*    Email.send({
-    Host : "smtp.elasticemail.com",
+);*/
+   Email.send({
+    Host : "smtp.gmail.com",
     Username : "murali.tananki@gmail.com",
     Password : "1720C39E72B2FE410091D265EFBD0E4555CF",
     To : 'murali.tananki@gmail.com',
@@ -333,7 +333,7 @@ function sendEmail(){
     Body : "And this is the body"
 }).then(
   message => alert('Mail sent')
-);*/
+);
 }
 </script>
 </body>

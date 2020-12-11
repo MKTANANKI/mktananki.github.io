@@ -285,7 +285,8 @@
                     <div>
                         <h3>Contact</h3>
                         <div>
-                            <form method="post" name="contact_form" action="contact.php">
+                            <!-- <form method="post" name="contact_form" action="contact.php"> -->
+                            <form name="contact_form">
                                 <input aria-label="Name" type="text" placeholder="Name" name="name" />
                                 <input aria-label="E Mail ID" type="text" placeholder="E-Mail ID" name="email" />
                                 <textarea aria-label="Enter your Comments" placeholder="Comments" name="message"></textarea>
@@ -309,27 +310,6 @@
 
     <script src="jquery-3.4.1.min.js"></script>
     <script src="main.js"></script>
-
-    <script src="https://unpkg.com/@optimizely/optimizely-sdk@3.5/dist/optimizely.browser.umd.min.js"></script>
-    <script src="https://cdn.optimizely.com/datafiles/FoJWryRReaUayATZzR2z2.json/tag.js"></script>
-
-    <script>
-        var optimizelyClientInstance = window.optimizelySdk.createInstance({
-            datafile: window.optimizelyDatafile,
-        });
-
-        var optimizelyClientInstance = window.optimizelySdk.createInstance({
-            datafile: window.optimizelyDatafile,
-        });
-
-        var enabled = optimizelyClientInstance.isFeatureEnabled('Murali_Tananki', 'user123');
-
-        if (enabled) {
-            console.log('Feature is ON!');
-        } else {
-            console.log('Feature is off.');
-        }
-    </script>
 </body>
 
 </html>

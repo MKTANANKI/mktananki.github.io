@@ -291,9 +291,8 @@
                                 <input id="mail" aria-label="E Mail ID" type="text" placeholder="E-Mail ID" name="email" />
                                 <textarea aria-label="Enter your Comments" placeholder="Comments" name="message" id="msg"></textarea>
                                 <div class="btn-ctn">
-                                    <!--<button aria-label="Send message" type="submit">Send</button>-->
-<!--onclick="sendEmail()"-->
-                                    <a id="send" href="mailto:murali.tananki@gmail.com?subject=MKTANANKI Website Visitor Message&body=">Send</a> 
+                                   <button aria-label="Send message" type="button" onclick="sendEmail()">Send</button>
+                                   <!--  <a id="send" href="mailto:murali.tananki@gmail.com?subject=MKTANANKI Website Visitor Message&body=">Send</a> -->
                                 </div>
                             </form>
                             <div class="qr">
@@ -307,33 +306,74 @@
         <footer id="footer" class="section-gutter">
             <p>&copy;2019 - Murali Krishna Tananki.</p>
         </footer>
+        <div id="successMsg" class="success-notify">Hi <span id="nameTxt"></span>, message sent successfully !</div>
+        <div id="error"></div>
     </div>
 
     <script src="jquery-3.4.1.min.js"></script>
     <script src="main.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-$(function(){
+/*$(function(){
 $('#msg').on('blur', function(){
 var href = 'mailto:murali.tananki@gmail.com?subject=Visitor\'s Message - ['+$("#visitor").val()+'<'+$("#mail").val()+'>] &body=',
 msg = $(this).val(), 
 mailBody = href+msg;
     $('#send').attr('href', mailBody);
 })
-})
+})*/
 function sendEmail(){
+var name = $('#visitor').val(),
+    validName = /^[a-zA-Z ]+$/.test(name),
+    mailId = $('#mail').val(),
+    validMailId = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(mailId),
+    msg =  $('#msg').val(),
+    validMsg = msg.length;
 
-//Security Token: 0b54fb81-e2ab-478c-a72c-ccd7cc987134
-/*     Email.send({
-    SecureToken : "0b54fb81-e2ab-478c-a72c-ccd7cc987134",
-    To : 'murali.tananki@gmail.com',
-    From : "murali.tananki@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert('Sent Message');
-);
-   Email.send({
+    if(validName && validMailId && validMsg){    
+        $('#successMsg').fadeIn('slow');
+        setTimeout(function(){
+            $('#nameTxt').text($('#visitor').val()); 
+            $('#successMsg').fadeOut('slow');
+            $("#contactForm").get(0).reset();
+        },2500); 
+        //Security Token: 0b54fb81-e2ab-478c-a72c-ccd7cc987134
+         Email.send({
+            SecureToken : "0b54fb81-e2ab-478c-a72c-ccd7cc987134",
+            To : 'murali.tananki@gmail.com',
+            From :mailId,
+            Subject : "MKTANANKI Visitor's Message",
+            Body : msg
+        }).then(
+          message => console.log(message);
+        );
+    } else{
+        if(!(name.length && mailId.length)){
+            $('#error').html('Please enter your <b>Details</b> !');
+        }else{
+            if(!name.length){
+                $('#error').html('Please enter your <b>Name</b> !');
+            }
+            if(!mailId.length){
+                $('#error').html('Please enter your <b>E-Mail ID</b> !');
+            }
+            if(!validName){
+                 $('#error').html('Please enter valid <b>Name</b> !');
+            }
+            
+            if(!validMailId){
+                 $('#error').html('Please enter valid <b>E-Mail ID</b> !');
+            }
+            if(!validMsg){
+                $('#error').html('Please enter your <b>Message</b> !');
+            }
+        }
+    }
+    
+  
+
+     
+ /*      Email.send({
     Host : "smtp25.elasticemail.com",
     Username : "murali.tananki@gmail.com",
     Password : "1720C39E72B2FE410091D265EFBD0E4555CF",
@@ -344,6 +384,7 @@ function sendEmail(){
 }).then(
   message => alert(message)
 );*/
+   
 }
 </script>
 </body>

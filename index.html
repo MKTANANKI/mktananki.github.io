@@ -348,7 +348,7 @@ var name = $('#visitor').val(),
           message => console.log(message)
         );
     } else{
-        if(!(name.length && mailId.length)){
+        if(!(name.length || mailId.length)){
             $('#error').html('Please enter your <b>Details</b> !');
         }else{
             if(!name.length){
@@ -368,6 +368,11 @@ var name = $('#visitor').val(),
                 $('#error').html('Please enter your <b>Message</b> !');
             }
         }
+        
+    $('.error-msg').fadeIn('fast');
+        setTimeout(function(){
+        $('.error-msg').fadeOut('fast');
+        },2500)
     }
       
  /* Email.send({

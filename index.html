@@ -345,7 +345,7 @@ var name = $('#visitor').val(),
             Subject : "MKTANANKI Visitor's Message",
             Body : msg
         }).then(
-          message => console.log(message);
+          message => console.log(message)
         );
     } else{
         if(!(name.length && mailId.length)){
@@ -369,11 +369,8 @@ var name = $('#visitor').val(),
             }
         }
     }
-    
-  
-
-     
- /*      Email.send({
+      
+ /* Email.send({
     Host : "smtp25.elasticemail.com",
     Username : "murali.tananki@gmail.com",
     Password : "1720C39E72B2FE410091D265EFBD0E4555CF",

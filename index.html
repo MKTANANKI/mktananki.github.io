@@ -250,7 +250,7 @@
                             <h5>Adminstrative</h5>
                             <p>Developed an application Intranet for staff & works in web for other user</p>
                             <p>It's a school administration app where we've implemented logic to create time-table based
-                                on avalable slots.</p>
+                                on available slots.</p>
                             <p>Worked on different modules like Transport, Admin, Staff, Teacher, Student & Parent.</p>
                             <h4>Mobile Apps</h4>
                             <h5>Insurance</h5>
@@ -262,16 +262,16 @@
                                 customer, presentation, sale, markings, contacts & notes etc.</p>
 
                             <h4>Products</h4>
-                            <p>Dynamica e-mailer template creation.(Drag & Drop and picking up options & entering
+                            <p>Dynamic e-mailer template creation.(Drag & Drop and picking up options & entering
                                 context)</p>
                             <p>Feedback / Survey template creation.(Drag & Drop / Sorting and picking up options &
-                                entering context). Supports Eight different types questions types.</p>
+                                entering context). Supports Eight different types of questions.</p>
                             <p>JSON Builder (with beutify options) - Chrome Extension</p>
                             <p>Report generator in HTML tables based on input provided.</p>
                             <h4>Static Websites</h4>
                             <p>Developed & hosted more than 100+ static websites</p>
                             <h4>PWA(Progressive Web Application)</h4>
-                            <p>This is my first Progressive Web App, it makes me feel good when I check site audit & w3c
+                            <p>This is my online profile which is a Progressive Web App, it makes me feel good when I check site audit & w3c
                                 standards.</p>
                         </div>
                     </div>
@@ -351,22 +351,15 @@ var name = $('#visitor').val(),
         if(!(name.length || mailId.length)){
             $('#error').html('Please enter your <b>Details</b> !');
         }else{
-            if(!name.length){
-                $('#error').html('Please enter your <b>Name</b> !');
+            if(!name.length || !validName){
+                $('#error').html('Please enter your valid <b>Name</b> !');
             }
-            if(!mailId.length){
-                $('#error').html('Please enter your <b>E-Mail ID</b> !');
+            if(!mailId.length || !validMailId){
+                $('#error').html('Please enter your valid<b>E-Mail ID</b> !');
             }
-            if(!validName){
-                 $('#error').html('Please enter valid <b>Name</b> !');
-            }
-            
-            if(!validMailId){
-                 $('#error').html('Please enter valid <b>E-Mail ID</b> !');
-            }
-            if(!validMsg){
-                $('#error').html('Please enter your <b>Message</b> !');
-            }
+        }
+        if(!validMsg){
+            $('#error').html('Please enter your <b>Message</b> !');
         }
         
     $('.error-msg').fadeIn('fast');
